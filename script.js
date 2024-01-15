@@ -1,9 +1,41 @@
 //complete this code
-class Person {}
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this._age = age; 
+    }
 
-class Student extends Person {}
+    // Getter for name
+    get getName() {
+        return `My name is ${this.name}`;
+    }
 
-class Teacher extends Person {}
+    // Setter for age
+    set setAge(age) {
+        if (age >= 0) {
+            this._age = age;
+        } else {
+            console.error("Age cannot be negative.");
+        }
+    }
+
+    // Getter for age
+    get getAge() {
+        return this._age;
+    }
+}
+
+class Student extends Person {
+    study() {
+        console.log(`${this.name} is studying.`);
+    }
+}
+
+class Teacher extends Person {
+    teach() {
+        console.log(`${this.name} is teaching.`);
+    }
+}
 
 // Do not change the code below this line
 window.Person = Person;
