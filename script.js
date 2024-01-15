@@ -5,12 +5,11 @@ class Person {
         this._age = age; 
     }
 
-    // Getter for name
+   
     get getName() {
-        return `My name is ${this.name}`;
+        return ` ${this.name}`;
     }
 
-    // Setter for age
     set setAge(age) {
         if (age >= 0) {
             this._age = age;
@@ -19,7 +18,6 @@ class Person {
         }
     }
 
-    // Getter for age
     get getAge() {
         return this._age;
     }
@@ -36,19 +34,10 @@ class Teacher extends Person {
         console.log(`${this.name} is teaching.`);
     }
 }
-const person1 = new Person("John", 30);
-console.log(person1.getName); // Output: My name is John
-console.log(person1.getAge);  // Output: 30
-
-const student1 = new Student("Alice", 20);
-student1.study(); // Output: Alice is studying.
-console.log(student1.getName); // Output: My name is Alice
-console.log(student1.getAge);  // Output: 20
-
 const teacher1 = new Teacher("Mr. Smith", 45);
-teacher1.teach(); // Output: Mr. Smith is teaching.
-console.log(teacher1.getName); // Output: My name is Mr. Smith
-console.log(teacher1.getAge); 
+teacher1.teach(); 
+console.log(teacher1.getName); 
+
 
 // Do not change the code below this line
 window.Person = Person;
