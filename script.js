@@ -1,4 +1,5 @@
 //complete this code
+
 class Person {
     constructor(name, age) {
         this.name = name;
@@ -31,13 +32,15 @@ class Student extends Person {
 
 class Teacher extends Person {
     teach() {
-        console.log(`${this.name} is teaching.`);
+        console.log (`${this.name} is teaching.`) ;
     }
 }
-const teacher1 = new Teacher("Mr. Smith", 45);
-teacher1.teach(); 
-console.log(teacher1.getName); 
+ const person1 = new Student("John", 30);
+  person1.study();
+ 
 
+const teacher1 = new Teacher("Mr. Smith", 45);
+teacher1.teach();
 
 // Do not change the code below this line
 window.Person = Person;
